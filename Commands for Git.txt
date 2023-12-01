@@ -1,0 +1,22 @@
+touch .gitignore
+git config --global user.name Roushan
+git config --global user.email roushansingh3698@gmail.com
+git init --
+git add
+git commit -m "Initial Commit"
+git status  # Just to see
+
+{ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+tail <path to id_rsa.pub> # Add this key to your github Account}
+
+git remote add origin <ssh url.git>
+git push origin master
+
+
+For Remote Origin already exists Error
+https://www.cloudbees.com/blog/remote-origin-already-exists-error#object-object
+
+
+URL Change code view as VS-Code
+"github1s.com"
+
