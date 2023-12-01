@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Show/Hide</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+    <!-- <i class="ri-eye-fill"></i>
+    <i class="ri-eye-off-fill"></i> -->
+    <div class="input-box">
+        <input type="password" placeholder="password" id="password">
+        <i class="ri-eye-off-fill" id="eyeicon"></i>
+    </div>
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+        let changeIcon = document.getElementsByTagName("i");
+
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+
+                eyeicon.classList.remove("ri-eye-off-fill");
+                eyeicon.classList.add("ri-eye-fill");
+
+            }else{
+                password.type = "password";
+                eyeicon.classList.add("ri-eye-off-fill");
+                eyeicon.classList.remove("ri-eye-fill");
+            }
+        }
+    </script>
+</body>
+</html>

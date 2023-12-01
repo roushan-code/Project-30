@@ -1,0 +1,44 @@
+{
+    "0":{
+        "h4": "1.Which is largest animal in the world",
+        "p1": "Shark",
+        "p2": "Blue Whale",
+        "p3": "Elephant",
+        "p4": "Giraffe"
+    },
+    "1":{
+        "h4": "2.Which is the smallest country in the world",
+        "p1": "Vatican City",
+        "p2": "Bhutan",
+        "p3": "Nepal",
+        "p4": "Shri Lanka"
+    },
+    "2":{
+        "h4": "3.Which is the largest desert in the world",
+        "p1": "Kalahari",
+        "p2": "Gobi",
+        "p3": "Sahara",
+        "p4": "Antarctica"
+    },
+    "3":{
+        "h4": "4.Which is Which is the smallest continent in the world",
+        "p1": "Asia",
+        "p2": "Australia",
+        "p3": "Arctic",
+        "p4": "Africa"
+    },
+    "4":{
+        "h4": "5.Which is largest internal organ in the human body",
+        "p1": "Lungs",
+        "p2": "Heart",
+        "p3": "Kidneys",
+        "p4": "Liver"
+    },
+    "5":{
+        "h4": "6.What is the percentage of the Earth covered by water",
+        "p1": "51%",
+        "p2": "61%",
+        "p3": "71%",
+        "p4": "81%"
+    }
+}

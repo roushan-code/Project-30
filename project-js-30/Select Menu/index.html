@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Menu</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<body>
+    <div class="hero">
+        <div class="selector">
+
+            <div id="selectField">
+                <p id="selectText">Select Social Media</p>
+                <i class="ri-arrow-down-s-line" id="icon"></i>
+            </div>
+        
+        <ul id="list" class="hide">
+            <li class="options">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" >
+                <p>Facebook</p>
+                
+            </li>
+            <li class="options">
+                <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" >
+                <p>Youtube</p>
+                
+            </li>
+            <li class="options">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" >
+                <p>Instagram</p>
+                
+            </li>
+            <li class="options">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174863.png" >
+                <p>PinTrest</p>
+                
+            </li>
+            <li class="options">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" >
+                <p>twitter</p>
+                
+            </li>
+            <li class="options">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/479px-WhatsApp_icon.png" >
+                <p>WhatsApp</p>
+            </li>
+        </ul>
+        
+    
+
+    <script>
+    var selectField = document.getElementById("selectField");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var hide = document.querySelector(".hide");
+    var icon = document.querySelector(".ri-arrow-down-s-line");
+    var hero = document.querySelector(".hero");
+    var list = document.getElementById("list");
+
+        for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML = this.textContent;
+                hide.classList.toggle("hide");
+                icon.classList.toggle("ri-arrow-up-s-line");
+            }
+        }
+
+        selectField.onclick = ()=>{
+            hide.classList.toggle("hide");
+            icon.classList.toggle("ri-arrow-up-s-line");
+        }
+
+    </script>
+</body>
+</html>

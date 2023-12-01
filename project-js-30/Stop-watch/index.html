@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>STOP WATCH</h1>
+    <div class="counterTimer">
+        <div class="pp"><p class="hours">00</p><span>Hours</span></div>
+        <div class="pp"><p class="minutes">00</p><span>Minutes</span></div>
+        <div class="pp"><p class="seconds">00</p><span>Seconds</span></div>
+        <div class="pp"><p class="miliseconds">00</p><span>miliSeconds</span></div>
+        <!-- <div class="clock">00:00:00</div> -->
+    </div>
+    <div class="btn">
+        <button onclick="startWatch()" class="start">Start</button>
+        <button onclick="reset()" class="Reset">reset</button>
+    </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

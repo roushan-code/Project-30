@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Scroll</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="gallery-wrap">
+        <i class="ri-skip-left-fill" id="backBtn"></i>
+        <div class="gallery">
+            <div>
+                <span><img src="https://cdn.pixabay.com/photo/2019/04/19/18/46/moon-4140109_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/01/25/12/06/anime-7743409_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/07/21/23/10/woman-8142461_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/09/13/12/49/ai-generated-8250939_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/09/13/12/59/wolf-8250954_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2019/10/29/10/16/potrait-4586590_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/08/04/17/04/ai-generated-8169681_1280.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2020/05/29/15/31/lantern-5235537_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2017/01/16/06/31/mermaid-1983375_640.png" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2023/05/08/15/57/ai-generated-7979066_640.jpg" alt=""></span>
+                <span><img src="https://cdn.pixabay.com/photo/2022/10/28/09/02/woman-7552669_640.jpg" alt=""></span>
+            </div>
+        </div>
+        <i class="ri-skip-right-fill" id="nextBtn"></i>
+    </div>
+    
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt)=>{
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        })
+
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 400;
+        })
+        backBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 400;
+        })
+    </script>
+</body>
+</html>

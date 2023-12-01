@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <form>
+            <i class="ri-send-plane-fill"></i>
+
+            <div class="input-group">
+                <label >Full Name</label>
+                <input type="text"  placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            
+            <div class="input-group">
+                <label >Phone No.</label>
+                <input type="text"  placeholder="1234567890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+            
+            <div class="input-group">
+                <label >Email Id</label>
+                <input type="text"  placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label >Your Message</label>
+                <textarea placeholder="Enter your message" rows="5" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+        </form>
+        
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>

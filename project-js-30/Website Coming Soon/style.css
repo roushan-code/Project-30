@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@200;500;600;700;900&family=Poppins:wght@400;600&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, "Poppins";
+}
+body{
+    background-color: black;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_1280.png);
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+    /* opacity: 0.3; */
+    position: relative;
+}
+.logo{
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.content h1{
+    font-size: 64px;
+    font-size: 600;
+}
+.content h1 span{
+    color: #00e7ff;
+}
+.content button{
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.content button:hover{
+    background: #00707c;
+}
+.content button i{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.launch-time{
+    display: flex;
+}
+.launch-time div{
+    flex-basis: 100px;
+}
+.launch-time div p{
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+.rocket{
+    width: 364px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    transform: rotate(-45deg);
+    animation: rocket 3.5s linear infinite;
+    filter: invert();
+}
+@keyframes rocket {
+    0%{
+        bottom: 100px;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        bottom: 100%;
+        opacity: 1;
+    }
+}
