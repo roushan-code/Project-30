@@ -1,9 +1,9 @@
 
 git config --global user.name Roushan
 git config --global user.email roushansingh3698@gmail.com
-git init --initilize the git commands 
+git init --Allows you to run any git commands on that folder
 git add . -- for adding all files   // git add <file name> -- for adding specific file
-git commit -m "Initial Commit"
+git commit -m "Initial Commit"  -- stages the files to get pushed on next "ush command"
 git status  # Just to see
 
 {ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -15,9 +15,10 @@ git push origin main
 
 
 
-Second Time Commit kr kuchh update file add krne ke liye commands ------
+Second Time(for commiting and pushing changes on internet) Commit kr kuchh update file add krne ke liye commands ------
 git add <file name>
 git commit -m "Second Commit"
+git pull origin master -- to make sure you are up to date
 git push origin main
 
 
@@ -25,12 +26,42 @@ git push origin main
 
 Create a .gitignore file in which you can write the files name which you want to 
 ignore to push into GitHub.
+-- a file used to ignore the files which you don't want to get track of by Git
 1.  ".gitignore"
 2. if you save a name like *.html then it will ignore all the file with html extension(.html) 
 
 
 
 git reset -- this command for untrack(unadd) all the files
+
+
+git remote -- setting address of the location where the changes will be pushed to 
+
+
+git log -- shows the hash code and details about the recent commit(show all commit with hash code)
+To exit git log, type “q” or “z”. Or type “h” to seek for help.
+
+
+git clone <url of file> -- clones/copies the git files from internet to your computer
+
+
+#Branching and Stuff
+git branch -- shows all branch
+git branch Bname -- creates the branch with bname
+git checkout Bname -- switches you to that branch
+
+
+
+#Merging Branch to Master Branch 
+git checkout master -- moves to master branch
+git pull origin master -- makes sure everything is up to date on your master branch before you merge.
+
+git branch -- merged     --merging the branch
+git merge Bname --       --merging the branch
+
+git push origin master -- pushes the changes
+
+
 
 
 
