@@ -10,7 +10,14 @@ git status  # Just to see
 tail <path to id_rsa.pub> # Add this key to your github Account}
 
 git remote add origin <ssh url.git>
-git push origin master
+git push origin main
+
+
+Second Time Commit kr kuchh update file add krne ke liye commands ------
+git add <file name>
+git commit -m "Second Commit"
+git push origin main
+
 
 
 For Remote Origin already exists Error
