@@ -1,8 +1,8 @@
-touch .gitignore
+
 git config --global user.name Roushan
 git config --global user.email roushansingh3698@gmail.com
-git init --
-git add
+git init --initilize the git commands 
+git add . -- for adding all files   // git add <file name> -- for adding specific file
 git commit -m "Initial Commit"
 git status  # Just to see
 
@@ -13,10 +13,24 @@ git remote add origin <ssh url.git>
 git push origin main
 
 
+
+
 Second Time Commit kr kuchh update file add krne ke liye commands ------
 git add <file name>
 git commit -m "Second Commit"
 git push origin main
+
+
+
+
+Create a .gitignore file in which you can write the files name which you want to 
+ignore to push into GitHub.
+1.  ".gitignore"
+2. if you save a name like *.html then it will ignore all the file with html extension(.html) 
+
+
+
+git reset -- this command for untrack(unadd) all the files
 
 
 
