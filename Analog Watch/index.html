@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghari</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+    #main{
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    button{
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 30px;
+        color: white;
+        background-color: rgb(56, 56, 56);
+        /* border: 2px solid  rgb(14, 14, 14); */
+    }
+    button:hover{
+        background-color: #464646;
+    }
+    .circle1{
+        background-color: rgb(41, 41, 41);
+        color: white;
+        width: 200px ;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #para1{
+        display: flex;
+        justify-content: center;
+    }
+    #para4{
+        display: flex;
+        justify-content: center;
+    }
+    #para2{
+        display: flex;
+    padding: 0px 52px;
+    margin-top: -25px;
+    justify-content: space-between;
+
+    }
+    #para3{
+        display: flex;
+    padding: 0px 52px;
+    margin-bottom: -25px;
+    justify-content: space-between;
+
+    }
+    #lr0{
+        display: flex;
+        padding: 0px 20px;
+    justify-content: space-between;
+
+    }
+    #lr2{
+        display: flex;
+        padding: 0px 20px;
+    justify-content: space-between;
+
+    }
+    #lr1{
+        display: flex;
+        padding: 10px 10px;
+    justify-content: space-between;
+
+    }
+
+    .overCircle{
+        position: absolute;
+        /* border: 1px solid red; */
+        display: flex;
+        width: 200px;
+        height: 200px;
+        justify-content: flex-end;
+        align-items: center;
+        
+
+        >div{
+            position: absolute;
+            font-size: 15px;
+            display: flex;
+        }
+    }
+    .index1{
+        z-index: 4;
+    }
+    .index2{
+        z-index: 2;
+    }
+    .index3{
+        z-index: 0;
+    }
+    .point{
+        color: red;
+        
+    }
+    .point1{
+        z-index: 2;
+        padding-right: 18px;
+        color: rgb(115, 255, 0);
+    }
+    .point2{
+        padding-right: 45px;
+        color: rgb(0, 183, 255);
+    }
+    
+</style>
+
+<body>
+    <div id="main">
+        <h1>Ye Ghari Smay Bhi Dikhati h</h1>
+    <div class="circle1">
+        <p id="para1">
+            <span>12</span>
+        </p>
+        <p id="para2">
+            <span>11</span>
+            <span>1</span>
+        </p>
+
+            <p id="lr0">
+                <span>10</span>
+                <span>2</span>
+            </p>
+            <p id="lr1">
+                <span>9</span>
+                <span>●</span>
+                <span>3</span>
+            </p>
+            <p id="lr2">
+                <span>8</span>
+                <span>4</span>
+            </p>
+        
+        <p id="para3">
+            <span>7</span>
+            <span>5</span>
+        </p>
+        <p id="para4">
+            <span>6</span>
+        </p>
+        <div class="overCircle index1">
+            <div class="point">• • • • • • • • • • •</div>
+        </div>
+        <div class="overCircle index2">
+            <div class="point1">• • • • • • • • • </div>
+        </div>
+
+        <div class="overCircle index3">
+            <div class="point2">• • • • • • </div>
+        </div>
+    </div>
+    <button onclick="stop()">stop watch</button>
+
+    </div>
+    <script>
+        function stop(){
+            clearInterval(myVar);
+        }
+        let myVar = setInterval(myTimer, 1000);
+        
+        function myTimer(){
+            const sec= document.querySelector(".index1")
+            const min = document.querySelector(".index2");
+            const hour = document.querySelector(".index3");
+            let now = new Date();
+            const hours = now.getHours()%12;
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+
+            // 270 for arrow direction
+            const secondDeg =270 + second * 6; // 6 degrees per second
+            const hourDeg =270 +(hours * 30) + (0.5 * minute); // 30 degrees per hour, 0.5 degrees per minute
+            const minuteDeg = 270 +(minute * 6) + (0.1 * second); // 6 degrees per minute or 0.1 degrees per second
+            
+            sec.style.transform = `rotate(${secondDeg}deg)`;
+
+            min.style.transform = `rotate(${minuteDeg}deg)`;
+            
+            hour.style.transform = `rotate(${hourDeg}deg)`;
+        }
+    </script>
+</body>
+
+</html>

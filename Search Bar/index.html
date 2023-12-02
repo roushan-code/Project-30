@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Search Bar</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" placeholder="Search">
+    </form>
+    <ul>
+        <li class="list-item">Wake up</li>
+        <li class="list-item">Make your border</li>
+        <li class="list-item">Exercise</li>
+        <li class="list-item">Meditate</li>
+        <li class="list-item">Drink water</li>
+        <li class="list-item">Problem</li>
+        <li class="list-item">right</li>
+        <li class="list-item">ture</li>
+        <li class="list-item">Menu</li>
+        <li class="list-item">BreakUp</li>
+        <li class="list-item">Beer</li>
+    </ul>
+    <script >
+        const ul = document.querySelector('ul');
+        const lis = document.querySelectorAll('li');
+        const search = document.querySelector('input');
+
+        search.addEventListener('keyup', function(){
+            searchTerm = search.value.toLowerCase();
+            console.log(searchTerm);
+            lis.forEach((li)=>{
+                const liText = li.textContent.toLowerCase();
+                if (liText.includes(searchTerm)) {
+                    li.style.display = 'list-item';
+                }else{
+                    li.style.display = 'none';
+                }
+            })
+        })
+    </script>
+</body>
+</html>
