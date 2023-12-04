@@ -72,3 +72,9 @@ https://www.cloudbees.com/blog/remote-origin-already-exists-error#object-object
 URL Change code view as VS-Code
 "github1s.com"
 
+learn git
+https://youtu.be/YbX_5FTOgL8?si=gA3ZlKTNedc1z5AK
+
+36:40 pull request
+48.41 fork(means tum kisi bhi chiz ko copy kr skte h) (56:00)
+
