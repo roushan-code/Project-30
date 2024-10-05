@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+
+    #section1 {
+      background-color: #3498db;
+    }
+
+    #section2 {
+      background-color: #2ecc71;
+    }
+
+    #section3 {
+      background-color: #e74c3c;
+    }
+
+    #scrollButton {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="section1" class="section">Section 1</div>
+  <div id="section2" class="section">Section 2</div>
+  <div id="section3" class="section">Section 3</div>
+
+  <button id="scrollButton" onclick="scrollToSection2()">Scroll to Section 2</button>
+
+  <script>
+    function scrollToSection2() {
+      const section2 = document.getElementById('section2');
+      section2.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
